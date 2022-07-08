@@ -1,0 +1,189 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+
+<html lang="es">
+
+
+
+<head>
+
+
+
+ <meta charset="UTF-8">
+
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <title>Inicio</title>
+
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+ 
+
+  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+  <link rel="stylesheet" href="{% static 'core/css/estilo.css' %}">
+
+  
+</head>
+
+
+<body>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+
+
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="funciones.js"></script>
+
+ <div id="header">
+    {% load static %}
+    <div class="row">
+        <img src="{%static 'core/imagenes/icons8-pet-64.png'%}" alt="">
+
+
+    </div>
+
+  
+
+
+
+
+<div id="buscador">
+
+<nav class="navbar navbar-light bg-light">
+
+ <div class="container-fluid">
+
+  <form class="d-flex">
+
+   <input class="form-control me-2" type="Buscar" placeholder="Buscar" aria-label="Buscar">
+
+   <button class="btn btn-outline-secondary" type="submit">Buscar</button>
+
+  </form>
+
+ </div>
+
+</nav>
+
+</div>
+
+
+
+
+
+<div id="botonessesion">
+
+  {% if user.is_authenticated %}
+  <a href="{% url 'logout' %}"><button type="button" class="btn btn-secondary">Cerrar sesion</button></a>
+
+
+  {% else %}
+    <a href="{% url 'inicio' %}"><button type="button" class="btn btn-secondary">Iniciar sesion</button></a>
+    {% endif %}
+
+    <a href="{% url 'registro' %}"><button type="button" class="btn btn-secondary">Crear Cuenta</button></a>
+</div>
+ </div>
+
+
+ <div id="redes">
+
+  <div class="red">
+
+    <a href="{% url 'index' %}">Inicio</a>
+
+  </div>
+
+
+
+  <div class="red">
+
+
+
+   <a href="{% url 'perro' %}">Perro</a>
+
+  </div>
+
+  <div class="red">
+
+    <a href="{% url 'gatos' %}">Gato</a>
+
+  </div>
+
+  <div class="red">
+
+    <a href="{% url 'aves' %}">Aves</a>
+
+  </div>
+
+  <div class="red">
+
+    <a href="{% url 'descuentos' %}"> Descuentos</a>
+
+  </div>
+
+  <div class="red">
+
+    <a href="{% url 'suscribirse' %}"> suscribirse</a>
+
+  </div>
+
+  <div class="red">
+
+    <a href="{% url 'productos' %}"> stock</a> 
+   </div>
+
+  <div class="red">
+
+    
+
+    <a href="{% url 'carrito' %}"><img src="{%static 'core/imagenes/carrito.png'%}" alt=""> </a>
+
+
+ 
+
+  </div>
+
+ 
+
+ </div>
+
+
+</div>
+
+
+
+  
+<div id="sesion">
+
+  <form action="" method="POST" class="formularioLogin">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+
+  </form>
+
+</div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  </p>
+
+
+  
+
+  
+</body>
+
+</html>

@@ -1,0 +1,450 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="es">
+
+
+
+<head>
+
+
+
+ <meta charset="UTF-8">
+
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <title>Inicio</title>
+
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+ 
+
+  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+  <link rel="stylesheet" href="{% static 'core/css/estilo.css' %}">
+
+  
+</head>
+
+
+<body>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+
+
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="funciones.js"></script>
+
+ <div id="header">
+    {% load static %}
+    <div class="row">
+        <img src="{%static 'core/imagenes/icons8-pet-64.png'%}" alt="">
+
+
+    </div>
+
+  
+
+
+
+
+<div id="buscador">
+
+<nav class="navbar navbar-light bg-light">
+
+ <div class="container-fluid">
+
+  <form class="d-flex">
+
+   <input class="form-control me-2" type="Buscar" placeholder="Buscar" aria-label="Buscar">
+
+   <button class="btn btn-outline-secondary" type="submit">Buscar</button>
+
+  </form>
+
+ </div>
+
+</nav>
+
+</div>
+
+
+
+
+
+<div id="botonessesion">
+
+  {% if user.is_authenticated %}
+  <a href="{% url 'logout' %}"><button type="button" class="btn btn-secondary">Cerrar sesion</button></a>
+
+
+  {% else %}
+    <a href="{% url 'inicio' %}"><button type="button" class="btn btn-secondary">Iniciar sesion</button></a>
+    {% endif %}
+
+    <a href="{% url 'registro' %}"><button type="button" class="btn btn-secondary">Crear Cuenta</button></a>
+</div>
+
+
+
+ </div>
+
+
+ 
+</div>
+
+
+<div id="redes">
+
+ <div class="red">
+
+   <a href="{% url 'index' %}">Inicio</a>
+
+ </div>
+
+
+
+ <div class="red">
+
+
+
+  <a href="{% url 'perro' %}">Perro</a>
+
+ </div>
+
+ <div class="red">
+
+   <a href="{% url 'gatos' %}">Gato</a>
+
+ </div>
+
+ <div class="red">
+
+   <a href="{% url 'aves' %}">Aves</a>
+
+ </div>
+
+ <div class="red">
+
+   <a href="{% url 'descuentos' %}"> Descuentos</a>
+
+ </div>
+
+ <div class="red">
+
+   <a href="{% url 'suscribirse' %}"> suscribirse</a>
+
+ </div>
+
+ <div class="red">
+
+  <a href="{% url 'productos' %}"> stock</a>
+  </div>
+
+ <div class="red">
+
+    <a href="{% url 'carrito' %}"><img src="{%static 'core/imagenes/carrito.png'%}" alt=""> </a>
+
+
+
+
+ </div>
+
+</div>
+
+
+
+ <div id="hola">
+
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+
+   <div class="carousel-inner">
+
+    <div class="carousel-item active">
+        
+
+        <img src="{%static 'core/imagenes/delivery.jpg'%}" alt="">
+
+
+    </div>
+
+    <div class="carousel-item">
+        <img src="{%static 'core/imagenes/arena.jpg'%}" alt="">
+
+
+    </div>
+
+    <div class="carousel-item">
+
+        <img src="{%static 'core/imagenes/liquidacion.jpg'%}" alt="">
+        
+
+
+    </div>
+
+   </div>
+
+   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+
+    data-bs-slide="prev">
+
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+    <span class="visually-hidden">Previous</span>
+
+   </button>
+
+   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+
+    data-bs-slide="next">
+
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+    <span class="visually-hidden">Next</span>
+
+   </button>
+
+  </div>
+
+ </div>
+
+
+  <div id="productos">
+
+
+
+
+    <div class="card" style="width: 18rem;">
+        <img src="{%static 'core/imagenes/jaulagrandeaves.jpg'%}" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Jaula Grande para Aves</h5>
+        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, vitae incidunt.
+          Doloribus minima consectetur assumenda ipsa? Fugit facilis reiciendis totam voluptatem nulla, dolorum ea modi
+          sed, molestiae veniam id ab deleniti mollitia eveniet ducimus dolor dignissimos eligendi repellat, blanditiis
+          sint.</p>
+          <h5>24.000</h5>
+
+        <a href="#" class="btn btn-primary">Agregar producto</a>
+
+
+
+      </div>
+
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        
+        <img src="{%static 'core/imagenes/jaulaavesoval.jpg'%}" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Jaula para Aves Forma Oval</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae culpa eligendi inventore
+          mollitia quos odit! Vero dignissimos consectetur modi recusandae molestiae fuga eius officia voluptatibus, ex
+          distinctio earum tenetur. Soluta, provident laboriosam consectetur ab natus officia quaerat libero
+          perspiciatis corrupti.</p>
+          <h5>24.000</h5>
+
+        <a href="#" class="btn btn-primary">Agregar producto</a>
+
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        
+        <img src="{%static 'core/imagenes/jaulaiglesia.jpg'%}" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Jaula Iglesia Doble para Aves</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt facere nam enim. Sint
+          deleniti possimus nam, molestiae odio esse deserunt numquam, porro quaerat rem molestias doloribus libero,
+          dicta aspernatur quam modi consequuntur. Ea harum impedit, hic fuga obcaecati nisi eum?</p>
+          <h5>24.000</h5>
+
+        <a href="#" class="btn btn-primary">Agregar producto</a>
+
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        
+        <img src="{%static 'core/imagenes/bañeraave.jpg'%}" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Bañera para Aves Interior Jw</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+          <h5>24.000</h5>
+
+        <a href="#" class="btn btn-primary">Agregar producto</a>
+
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        
+        <img src="{%static 'core/imagenes/bañeraave2.jpg'%}" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Bañera para Aves con juego de Aros</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere esse nam vero unde. Aut
+          facere perferendis reprehenderit obcaecati quasi blanditiis asperiores. Facilis, sapiente expedita tenetur,
+          fugiat, inventore iure beatae officiis quibusdam totam nemo quos. Sed ad aspernatur molestiae hic
+          consequuntur.</p>
+          <h5>24.000</h5>
+
+        <a href="#" class="btn btn-primary">Agregar producto</a>
+
+      </div>
+    </div>
+
+
+    <div class="card" style="width: 18rem;">
+        
+        <img src="{%static 'core/imagenes/bañeraave3.jpg'%}" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Bañera En Forma De Hoja Con Juguete</h5>
+        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem, similique. Quae
+          itaque eius fugiat, harum ipsam laborum molestiae ipsum minus accusantium in vel officiis rerum qui beatae
+          reprehenderit perspiciatis. Minima, culpa quia? Ipsum mollitia suscipit dolorem? Error sit maiores assumenda.
+        </p>
+        <h5>24.000</h5>
+
+        <a href="#" class="btn btn-primary">Agregar producto</a>
+
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <div id="productos2">
+
+
+    <div class="card" style="width: 18rem;">
+        
+        <img src="{%static 'core/imagenes/juguete.jpg'%}" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Juguete Colgante Forma de Estrella</h5>
+        <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse perspiciatis molestiae sit
+          voluptatibus in nihil autem. Laboriosam, molestiae neque cumque voluptatibus optio maiores minima blanditiis
+          quas sint iste et ducimus nobis dolores, corporis quidem dignissimos quis nemo officiis numquam sapiente.</p>
+          <h5>24.000</h5>
+
+        <a href="#" class="btn btn-primary">Agregar producto</a>
+
+
+
+      </div>
+
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        
+        <img src="{%static 'core/imagenes/juguete2.jpg'%}" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Set de huesos de Jibia</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo itaque ab enim et, ducimus
+          hic quidem neque sint alias nihil doloremque soluta velit dolorem tenetur quos. Enim eos magnam, natus beatae
+          ut cum quasi! Nesciunt commodi delectus quos consequatur officia.</p>
+          <h5>24.000</h5>
+
+        <a href="#" class="btn btn-primary">Agregar producto</a>
+
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        
+        <img src="{%static 'core/imagenes/juguete3.jpg'%}" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Set de juego patin, carro y cono para aves</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis debitis blanditiis
+          assumenda cupiditate illum modi sapiente! A ducimus debitis quod optio, totam officia iure ipsa quia
+          voluptates quae tempore atque quam odit. Ipsam dignissimos cumque distinctio quasi! Exercitationem, impedit
+          illum.</p>
+          <h5>24.000</h5>
+
+        <a href="#" class="btn btn-primary">Agregar producto</a>
+
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        
+        <img src="{%static 'core/imagenes/columpio.jpg'%}" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Columpio con campana para Aves</h5>
+        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis molestias officia a ad
+          explicabo architecto ea nobis deleniti numquam at necessitatibus ducimus vel, delectus, rem commodi nam
+          doloremque voluptatem aspernatur quo. Vero adipisci accusantium totam optio quae quo quisquam est.</p>
+          <h5>24.000</h5>
+
+        <a href="#" class="btn btn-primary">Agregar producto</a>
+
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        
+        <img src="{%static 'core/imagenes/columpio2.jpg'%}" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Columpio de Madera y Cuerda para Aves</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo a deleniti odio facilis
+          placeat ullam, corporis distinctio quae, vitae delectus tempora mollitia, recusandae assumenda iusto. Dolores
+          quia, earum atque numquam repellat suscipit necessitatibus ipsa quasi quam, ducimus eveniet eaque autem.</p>
+          <h5>24.000</h5>
+
+        <a href="#" class="btn btn-primary">Agregar producto</a>
+
+      </div>
+    </div>
+
+
+    <div class="card" style="width: 18rem;">
+        
+        <img src="{%static 'core/imagenes/escalera.jpg'%}" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Escalera de Madera para aves</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde eaque voluptate non aliquid
+          ea saepe et iure voluptates quia explicabo minima neque accusamus quisquam quis mollitia ab, incidunt itaque
+          expedita deserunt est nobis culpa! Voluptas sit adipisci veritatis iure illum?</p>
+          <h5>24.000</h5>
+
+        <a href="#" class="btn btn-primary">Agregar producto</a>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div id="barrabaja">
+    <div id="titulobarrabaja">Contactenos!</div>
+    
+    <img src="{%static 'core/imagenes/facebook.png'%}" alt="">
+    
+    <img src="{%static 'core/imagenes/instagram.png'%}" alt="">
+    
+    <img src="{%static 'core/imagenes/whatsapp.png'%}" alt="">
+    
+    <img src="{%static 'core/imagenes/gmail.png'%}" alt="">
+    
+    <img src="{%static 'core/imagenes/telefono.png'%}" alt="">
+  </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+    </p>
+
+
+
+</body>
+
+</html>

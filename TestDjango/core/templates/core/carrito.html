@@ -1,0 +1,233 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="es">
+
+
+
+<head>
+
+
+
+ <meta charset="UTF-8">
+
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <title>Inicio</title>
+
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+ 
+
+  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+  <link rel="stylesheet" href="{% static 'core/css/estilo.css' %}">
+
+  
+</head>
+
+
+<body>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+
+
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="funciones.js"></script>
+
+ <div id="header">
+    {% load static %}
+    <div class="row">
+        <img src="{%static 'core/imagenes/icons8-pet-64.png'%}" alt="">
+
+
+    </div>
+
+  
+
+
+
+
+<div id="buscador">
+
+<nav class="navbar navbar-light bg-light">
+
+ <div class="container-fluid">
+
+  <form class="d-flex">
+
+   <input class="form-control me-2" type="Buscar" placeholder="Buscar" aria-label="Buscar">
+
+   <button class="btn btn-outline-secondary" type="submit">Buscar</button>
+
+  </form>
+
+ </div>
+
+</nav>
+
+</div>
+
+
+
+
+
+<div id="botonessesion">
+
+  {% if user.is_authenticated %}
+  <a href="{% url 'logout' %}"><button type="button" class="btn btn-secondary">Cerrar sesion</button></a>
+
+
+  {% else %}
+    <a href="{% url 'inicio' %}"><button type="button" class="btn btn-secondary">Iniciar sesion</button></a>
+    {% endif %}
+
+    <a href="{% url 'registro' %}"><button type="button" class="btn btn-secondary">Crear Cuenta</button></a>
+</div>
+
+
+ </div>
+
+
+ <div id="redes">
+
+  <div class="red">
+
+    <a href="{% url 'index' %}">Inicio</a>
+
+  </div>
+
+
+
+  <div class="red">
+
+
+
+   <a href="{% url 'perro' %}">Perro</a>
+
+  </div>
+
+  <div class="red">
+
+    <a href="{% url 'gatos' %}">Gato</a>
+
+  </div>
+
+  <div class="red">
+
+    <a href="{% url 'aves' %}">Aves</a>
+
+  </div>
+
+  <div class="red">
+
+    <a href="{% url 'descuentos' %}"> Descuentos</a>
+
+  </div>
+
+  <div class="red">
+
+    <a href="{% url 'suscribirse' %}"> suscribirse</a>
+
+  </div>
+
+  <div class="red">
+
+    <a href="{% url 'productos' %}"> stock</a> 
+   </div>
+
+  <div class="red">
+
+    <a href="{% url 'carrito' %}"><img src="{%static 'core/imagenes/carrito.png'%}" alt=""> </a>
+
+
+ 
+
+  </div>
+
+ 
+ </div>
+
+
+
+    
+ 
+
+    
+  </div>
+
+  <div id="carrito">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">nombre</th>
+          <th scope="col">cantidad</th>
+          <th scope="col">precio</th>
+          <th scope="col">editar</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+  
+     
+  
+      </table>
+    </div>
+  
+  
+  
+      
+      </tbody>
+    </table>
+  
+  
+  
+  </div>
+
+
+ 
+
+ <button type="submit" class="btn btn-secondary">Pagar</button>
+ 
+
+ <a href="{% url 'compras' %}"><button type="button" class="btn btn-secondary">Ver mis compras</button></a>
+
+
+ </div>
+ 
+ <div id="progreso">
+   <h2>Seguimiento de compra</h2>
+   <br>
+ <div class="progress">
+  <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0"
+      aria-valuemax="100">25%
+  </div>
+ </div>
+</div>
+
+<div id="progresopaso">
+  <h3>Realizando pedido</h3>
+  <br>
+  <h3>Confirmando pedido</h3>
+  <br>
+  <h3>Pedido en camino</h3>
+  <br>
+  <h3>Pedido entregado</h3>
+</div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+  
+</body>
+
+</html>

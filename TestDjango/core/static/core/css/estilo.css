@@ -1,0 +1,669 @@
+* {
+
+    padding: 0;
+  
+    margin: 0;
+  
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  
+  }
+  
+  .error{
+      color: 2PX #FF5656  solid;
+      background-color: #FF5656 !important;
+  }
+
+  .ok{
+      background-color: greenyellow!important;
+  }
+  
+  a {
+  
+    color: white;
+  
+    text-decoration: none;
+  
+  }
+
+
+
+  #header {
+  
+    display: flex;
+  
+    background-color: #FF5656;
+  
+    align-items: center;
+  
+    justify-content: space-between;
+  
+    padding-right: 5px;
+  
+    color: white;
+  
+  }
+  
+  
+  
+  #header>a {
+  
+    display: flex;
+  
+    justify-content: end;
+  
+    padding-right: 5px;
+  
+    margin: 5px;
+  
+    color: white;
+  
+  }
+  
+  
+  
+  #logo {
+  
+    cursor: pointer;
+  
+    display: flex;
+  
+    align-items: center;
+  
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+    font-size: xx-large;
+  
+  }
+  
+  
+  
+  #hola {
+  
+    display: flex;
+  
+    justify-content: center;
+  
+    padding-top: 50px;
+  
+  }
+  
+  
+  
+  #hola>img {
+  
+    width: 10%;
+  
+    height: 10%;
+  
+  }
+  
+  
+  
+  
+  
+  #logo>img {
+  
+    width: 200px;
+  
+    padding-right: 100px;
+  
+    margin: 3px 0 3px 10px;
+  
+  }
+  
+  
+  
+  #menu>a {
+  
+    margin: 0 10px 0 0;
+  
+    color: white;
+  
+    text-decoration: none;
+  
+    padding-top: 10px;
+  
+    background-color: #FF7D6B;
+  
+  
+  }
+  
+  
+  
+  #redes {
+  
+    display: flex;
+  
+    justify-content: center;
+  
+    align-items: center;
+  
+    background-color: #FF7D6B;
+  
+    padding: 5px;
+  
+    color: white;
+  
+  }
+  
+  
+  
+  #redes>img {
+  
+    display: flex;
+  
+    justify-content: end;
+  
+  
+  }
+  
+  
+  
+  .red {
+  
+    width: 10%;
+  
+    display: flex;
+  
+    height: 40px;
+  
+    align-items: center;
+  
+    justify-content: center;
+  
+    transition-duration: 0.5s;
+  
+    cursor: pointer;
+  
+  }
+  
+  
+  
+  .red:hover {
+  
+    background-color: #FF5656;
+  
+    color: #ffffff;
+  
+    transition-duration: 0.5s;
+  
+  }
+  
+  
+  
+  #banner {
+  
+    display: flex;
+  
+    justify-content: center;
+  
+  }
+  
+  
+  
+  #productos {
+  
+    margin-top: 20px;
+  
+    margin-left: 20px;
+  
+    padding: 20px;
+  
+    display: flex;
+  
+    justify-content: space-between;
+  
+    background-color: #c9c9c9;
+  
+  }
+  
+
+  
+  #productos2 {
+  
+    margin-top: 20px;
+  
+    margin-left: 20px;
+  
+    padding: 20px;
+  
+    display: flex;
+  
+    justify-content: space-between;
+  
+    background-color: #c9c9c9;
+  
+  }
+  
+  
+  
+  #buscador {
+  
+    display: flex;
+  
+    justify-content: center;
+  
+  
+  
+  }
+  
+  
+  
+  
+  
+  #sesion {
+  
+    display: flex;
+  
+    width: 100%;
+  
+    margin-top: 10%;
+  
+    justify-content: space-around;
+  
+  }
+  
+  
+  
+  #opciones {
+  
+    margin-top: 100px;
+  
+    display: flex;
+  
+    justify-content: space-around;
+  
+  }
+  
+  
+  
+  #barrabaja {
+  
+    display: flex;
+  
+    align-items: center;
+  
+    justify-content: space-between;
+  
+    padding-right: 5px;
+  
+    background-color: #c9c9c9;
+  
+    margin: 20px;
+  
+  }
+  
+  
+  
+  
+  
+  #carrito {
+  
+    margin-top: 20px;
+  
+    margin-left: 40px;
+  
+    display: flex;
+  
+    justify-content: center;
+
+  
+  }
+  
+  
+  
+  #boton {
+  
+    margin-top: 20px;
+  
+    margin-left: 40px;
+  
+    display: flex;
+  
+    justify-content: center;
+  
+    justify-content: space-evenly
+  
+  }
+  
+  
+  
+  #facebook {
+  
+    margin: 80px;
+  
+    cursor: pointer;
+  
+    text-align: right;
+  
+  }
+  
+  
+  
+  #instagram {
+  
+    margin: 80px;
+  
+    cursor: pointer;
+  
+    text-align: right;
+  
+  }
+  
+  
+  
+  #whatsapp {
+  
+    margin: 80px;
+  
+    cursor: pointer;
+  
+    text-align: right;
+  
+  }
+  
+  
+  
+  #correo {
+  
+    margin: 80px;
+  
+    cursor: pointer;
+  
+    text-align: right;
+  
+  }
+  
+  
+  
+  #telefono {
+  
+    margin: 80px;
+  
+    cursor: pointer;
+  
+    text-align: right;
+  
+  
+  
+  }
+  
+  
+  
+  #titulobarrabaja {
+  
+    padding-left: 5%;
+  
+  
+  
+  }
+  
+  
+  
+  #facebook>img {
+  
+    width: 50px;
+  
+  }
+  
+  #instagram>img {
+  
+    width: 50px;
+  
+  }
+  
+  
+  #whatsapp>img {
+  
+    width: 50px;
+  
+  }
+  
+  
+  
+  #correo>img {
+  
+    width: 50px;
+  
+  }
+  
+  
+  
+  #telefono>img {
+  
+    width: 50px;
+  
+  }
+  
+  
+  
+  #carrito {
+  
+    margin-top: 20px;
+  
+    margin-left: 40px;
+  
+    display: flex;
+  
+    justify-content: center;
+  
+  }
+  
+  
+  #boton {
+  
+    margin-top: 20px;
+  
+    margin-left: 40px;
+  
+    display: flex;
+  
+    justify-content: center;
+  
+    justify-content: space-evenly
+  
+  }
+
+
+
+  #agregar{
+    flex-direction: column;
+    margin-right: 50px;
+  }
+  
+  @media (max-width: 1000px) {
+  
+  
+  
+    #header {
+  
+      flex-direction: column;
+  
+    }
+  
+    #barrabaja{
+  
+      flex-direction: column;
+      padding-top: 0px;
+    }
+  
+    #redes{
+  
+  
+  
+      flex-direction: column;
+  
+    }
+
+
+    #totalpodductos{
+      display: flex;
+      justify-content: space-between;
+    }
+
+
+  
+    #productos{
+  
+      flex-direction: column;
+      
+      margin-left: 50px;
+  
+      margin-right: 50px;
+  
+      padding-left: 50px;
+  
+      padding-right: 50px;
+    }
+  
+  
+  
+    #productos2{
+  
+      flex-direction: column;
+      
+      margin-left: 50px;
+  
+      margin-right: 50px;
+  
+      padding-left: 50px;
+  
+      padding-right: 50px;
+    }
+  
+  
+  
+    #menu {
+  
+  
+  
+      display: flex;
+  
+      flex-direction: column;
+  
+      text-align: center;
+    }
+  
+
+  
+    .card-text {
+  
+      display: none !important;
+
+    }
+
+
+    #textoseguimiento{
+display: none !important;
+    }
+
+  
+  }
+
+
+  @media (max-width: 724px) {
+  
+  
+    #header {
+  
+      flex-direction: column;
+  
+  
+    }
+
+
+  
+    #barrabaja{
+  
+      flex-direction: column;
+  
+      padding-top: 0px;
+
+  
+    }
+  
+    #redes{
+  
+      flex-direction: column;
+  
+    }
+
+    #totalpodductos{
+flex-direction: column;    }
+    
+  
+    #productos{
+  
+      flex-direction: column;
+  
+      margin-left: 50px;
+  
+      margin-right: 50px;
+  
+      padding-left: 50px;
+  
+      padding-right: 50px;
+    }
+  
+  
+  
+    #productos2{
+  
+      flex-direction: column;
+  
+      margin-left: 50px;
+  
+      margin-right: 50px;
+  
+      padding-left: 50px;
+  
+      padding-right: 50px;
+  
+  
+  
+    }
+  
+  
+    #menu {
+      display: flex;
+  
+      flex-direction: column;
+  
+      text-align: center;
+  
+    }
+  
+  
+    .card-text {
+  
+      display: none !important;
+  
+    }
+
+    #progreso{
+      margin: 0%;
+    }
+
+    #progresopaso{
+      display: none !important;
+
+    }
+
+
+  }
+
+  #progreso{
+    margin: 100px;
+  }
+
+  #progreso>h2{
+    display: flex;
+    justify-content: center;
+  }
+
+
+  #progresopaso{
+    display: flex;
+    justify-content: space-between;
+    margin: 70px;
+  }
